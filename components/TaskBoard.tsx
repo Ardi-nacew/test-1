@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { addTask, tagCount, useTasks } from '@/lib/taskStore';
 
 type Filter = 'all' | 'open' | 'done';
@@ -78,11 +79,13 @@ export default function TaskBoard() {
 
       <ul className="mt-4 space-y-2">
         {visibleTasks.map((task) => (
-          <li
-            key={task.id}
-            className={`rounded border border-gray-200 px-3 py-2 ${task.done ? 'text-gray-400 line-through' : ''}`}
-          >
-            {task.title}
+          <li key={task.id}>
+            <Link
+              href={`/board/${task.id}`}
+              className={`block rounded border border-gray-200 px-3 py-2 hover:bg-gray-50 ${task.done ? 'text-gray-400 line-through' : ''}`}
+            >
+              {task.title}
+            </Link>
           </li>
         ))}
       </ul>

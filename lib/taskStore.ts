@@ -60,3 +60,11 @@ export function addTask(title: string) {
   }
   listeners.forEach((listener) => listener());
 }
+
+export function toggleTask(id: number) {
+  tasks = tasks.map((task) => (task.id === id ? { ...task, done: !task.done } : task));
+  if (typeof window !== 'undefined') {
+    window.localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
+  }
+  listeners.forEach((listener) => listener());
+}
