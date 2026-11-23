@@ -12,6 +12,7 @@ const seedTasks: Task[] = [
   { id: 1, title: 'Buy milk', done: false },
   { id: 2, title: 'Call the bank', done: true },
   { id: 3, title: 'Fix the bike', done: false },
+  { id: 4, title: 'Book the dentist', done: false },
 ];
 
 let tasks: Task[] = seedTasks;
