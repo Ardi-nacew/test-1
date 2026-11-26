@@ -2,7 +2,7 @@
 export default function PicturesPage() {
   return (
     <main className="mx-auto max-w-md p-6">
-      <h1 className="text-2xl font-bold">Pictures</h1>
+      <h1 className="text-2xl font-bold">Our pictures</h1>
       <img
         src="https://images.unsplash.com/photo-0000000000000-000000000000?w=320"
         width={320}
