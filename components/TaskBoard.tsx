@@ -30,7 +30,7 @@ export default function TaskBoard() {
 
   return (
     <section className="mx-auto max-w-md p-6">
-      <h1 className="text-2xl font-bold">My tasks</h1>
+      <h1 className="text-2xl font-bold">My tasks (GitHub)</h1>
       <p className="mt-1 text-sm text-gray-600">
         {open} open · {tagCount} tags
       </p>
